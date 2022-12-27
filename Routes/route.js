@@ -3,6 +3,7 @@ const router = express.Router()
 const { createBlog, getBlog, updatedBlog, deleteBlog } = require('../Controller/blogController')
 
 //-------------For Customer------------------//
+
 router.post('/createBlog', createBlog)
 router.get('/getBlog', getBlog)
 router.put('/updatedBlog', updatedBlog)
@@ -18,6 +19,8 @@ router.all("/*", function (req, res) {
 })
 
 
-
+router.get('/', (req,res) => {
+    res.send({message : "Welcome to Home Page"})
+})
 
 module.exports = router
