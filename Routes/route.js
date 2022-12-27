@@ -11,7 +11,7 @@ router.delete('/deleteBlog', deleteBlog)
 
 
 router.get('/', (req,res) => {
-    res.send({status: true , message : "Welcome to Home Page"})
+    res.send({status: true, message : "Welcome to Home Page"})
 })
 
 //-------------For Invaild URL------------------//
