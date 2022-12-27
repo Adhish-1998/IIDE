@@ -10,17 +10,16 @@ router.put('/updatedBlog', updatedBlog)
 router.delete('/deleteBlog', deleteBlog)
 
 
+router.get('/', (req,res) => {
+    res.send({message : "Welcome to Home Page"})
+})
+
 //-------------For Invaild URL------------------//
 router.all("/*", function (req, res) {
     res.status(404).send({
         status: false,
         message: "Page Not Found !!!"
     })
-})
-
-
-router.get('/', (req,res) => {
-    res.send({message : "Welcome to Home Page"})
 })
 
 module.exports = router
